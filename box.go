@@ -62,7 +62,7 @@ func (b *box) ReplaceByIndex(i int, shape Shape) (Shape, error) {
 	}
 	b.shapes[i] = shape
 
-	return shape, nil
+	return element, nil
 }
 
 // SumPerimeter provides sum perimeter of all shapes in the list.
