@@ -2,6 +2,7 @@ package golang_united_school_homework
 
 import (
 	"errors"
+	"strconv"
 )
 
 // box contains list of shapes and able to perform operations on them
@@ -111,7 +112,7 @@ func (b *box) getElementByIndex(index int) (Shape, error) {
 		return nil, errors.New("Out of the shapesCapacity range")
 	}
 	if !b.indexExists(index) {
-		return nil, errors.New("Element index " + string(index) + "not exists")
+		return nil, errors.New("Element index " + strconv.Itoa(index) + "not exists")
 	}
 
 	return b.shapes[index], nil
