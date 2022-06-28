@@ -24,7 +24,7 @@ func (b *box) AddShape(shape Shape) error {
 	if b.shapesCapacity == len(b.shapes)-1 {
 		return errors.New("Out of the shapesCapacity range")
 	}
-	b.shapesCapacity++
+
 	b.shapes = append(b.shapes, shape)
 
 	return nil
