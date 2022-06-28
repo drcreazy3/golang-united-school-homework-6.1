@@ -48,7 +48,7 @@ func (b *box) ExtractByIndex(i int) (Shape, error) {
 	if err != nil {
 		return element, err
 	}
-	remove(b.shapes, i)
+	b.shapes = remove(b.shapes, i)
 
 	return element, nil
 }
