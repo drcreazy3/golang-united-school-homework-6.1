@@ -91,7 +91,7 @@ func (b *box) RemoveAllCircles() error {
 	var newShapes []Shape
 	circleExists := false
 	for _, v := range b.shapes {
-		switch v := v.(type) {
+		switch v.(type) {
 		case Circle:
 			circleExists = true
 			continue
